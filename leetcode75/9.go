@@ -7,7 +7,7 @@ import (
 func increasingTriplet(nums []int) bool {
     firstNum, secondNum := math.MaxInt32, math.MaxInt32
 	for _, value := range(nums) {
-		if value < firstNum && value < secondNum {
+		if value < firstNum {
 			firstNum = value
 		} else if value > firstNum && value < secondNum {
 			secondNum = value
