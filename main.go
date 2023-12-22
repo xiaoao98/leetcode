@@ -1,11 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"leetcode/leetcode75"
 )
 
 //
 func main() {
-	height := []int{1,8,6,2,5,4,8,3,7}
-	leetcode75.MaxArea(height)
+	s := "3[a]2[bc]"
+	fmt.Print(leetcode75.DecodeString(s))
 }
