@@ -10,9 +10,9 @@ func Constructor() RecentCounter {
 }
 
 func (this *RecentCounter) Ping(t int) int {
+	this.Counter = append(this.Counter, t)
 	for this.Counter[0] < t-3000 {
 		this.Counter = this.Counter[1:]
 	}
-	this.Counter = append(this.Counter, t)
 	return len(this.Counter)
 }
