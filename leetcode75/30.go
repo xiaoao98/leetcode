@@ -7,7 +7,7 @@ type ListNode struct {
 
 func deleteMiddle(head *ListNode) *ListNode {
 	if head.Next == nil {
-		return head
+		return nil
 	}
 	dummy := &ListNode{Val: 0, Next: head}
 	slow := dummy
