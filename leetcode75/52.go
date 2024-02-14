@@ -66,19 +66,4 @@ func (h *MinHeap52) Pop() interface{} {
 	*h = (*h)[:len(*h)-1]
 	return x
 }
-// type IntArrayHeap struct{
-// 	indices []int
-// 	nums []int
-// }
 
-// func (h IntArrayHeap) Len() int           { return len(h.indices) }
-// func (h IntArrayHeap) Less(i, j int) bool { return h.nums[i] < h.nums[j] }
-// func (h IntArrayHeap) Swap(i, j int)      { h.indices[i], h.indices[j] = h.indices[j], h.indices[i] }
-// func (h *IntArrayHeap) Push(x any)        { h.indices = append(h.indices, x.(int)) }
-// func (h *IntArrayHeap) Pop() any {
-// 	old := h.indices
-// 	n := len(old)
-// 	x := old[n-1]
-// 	h.indices = old[0 : n-1]
-// 	return x
-// }
