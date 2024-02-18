@@ -23,12 +23,12 @@ func binSearch(potions []int, spell int, success int64) int {
 		bool1 := int64(potions[mid] * spell) >= success
 		bool2 := mid == 0 || int64(potions[mid-1] * spell) < success
 		if bool1 && bool2 {
-			return size - mid 
+			return size - mid
 		} else if int64(potions[mid] * spell) < success {
 			low = mid + 1
 		} else {
 			high = mid - 1
 		}
 	}
-	return -1
+	return 0
 }
