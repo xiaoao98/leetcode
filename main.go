@@ -22,5 +22,5 @@ func main() {
 	b.Next = c
 	c.Next = d
 	fmt.Print(leetcode75.PairSum(a))
-	//43 52 66 again 
+	//43 47 52 56 66 again 
 }
