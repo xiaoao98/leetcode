@@ -2,14 +2,12 @@ package main
 
 import (
 	"fmt"
-	"leetcode/daily"
-	"leetcode/leetcode75"
 )
 
 //
 func main() {
-	s := "3[a]2[bc]"
-	fmt.Print(leetcode75.DecodeString(s))
+	// s := "3[a]2[bc]"
+	// fmt.Print(leetcode75.DecodeString(s))
 	// a := &leetcode75.ListNode{Val: 1, Next: nil}
 	// b := &leetcode75.ListNode{Val: 2, Next: nil}
 	// a.Next = b
@@ -23,8 +21,13 @@ func main() {
 	// b.Next = c
 	// c.Next = d
 	// fmt.Print(leetcode75.PairSum(a))
-	input := "etddgeia"
-	output := daily.TransferString(input)
-	fmt.Println(output)
+	// input := "etddgeia"
+	// output := daily.TransferString(input)
+	// fmt.Println(output)
+	s := "abcd"
+	t := "bcdf"
+	i := 0
+	//cost := int(math.Abs(float64(s[i] - t[i])))
+	fmt.Print(float64(int(s[i]) - int(t[i])))
 	//43 47 52 56 66 72 again 
 }
