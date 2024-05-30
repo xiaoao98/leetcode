@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"leetcode/daily"
 )
 
 //
@@ -24,10 +25,12 @@ func main() {
 	// input := "etddgeia"
 	// output := daily.TransferString(input)
 	// fmt.Println(output)
-	s := "abcd"
-	t := "bcdf"
-	i := 0
+	// s := "abcd"
+	// t := "bcdf"
+	// i := 0
 	//cost := int(math.Abs(float64(s[i] - t[i])))
-	fmt.Print(float64(int(s[i]) - int(t[i])))
+	// fmt.Print(float64(int(s[i]) - int(t[i])))
 	//43 47 52 56 66 72 again 
+	s := "1101"
+	fmt.Println(daily.NumSteps(s))
 }
