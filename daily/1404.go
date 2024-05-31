@@ -17,7 +17,7 @@ func NumSteps(s string) int {
 	// return ret
 	ret := 0
 	for s != "1" {
-		if s[len(s)-1] == 0 {
+		if s[len(s)-1] == '0' {
 			s = s[:len(s)-1]
 		} else {
 			s = AddOne(s)

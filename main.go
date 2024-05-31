@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"leetcode/daily"
+	"sort"
 )
 
 //
@@ -31,6 +32,20 @@ func main() {
 	//cost := int(math.Abs(float64(s[i] - t[i])))
 	// fmt.Print(float64(int(s[i]) - int(t[i])))
 	//43 47 52 56 66 72 again 
-	s := "1101"
-	fmt.Println(daily.NumSteps(s))
+	// s := "1101"
+	// fmt.Println(daily.NumSteps(s))
+	startGene := "AACCGGTT"
+	endGene := "AACCGGTA"
+	bank := []string{"AACCGGTA"}
+	fmt.Println(daily.MinMutation(startGene, endGene, bank))
+	// a := [][]int{{1,2}, {3, 1}, {4,5}}
+	// sort.Slice(a, func(i, j int)bool{
+	// 	return a[i][1] < a[j][1]
+	// })
+	// fmt.Println(a)
+	charArr := []byte("asdafesfqa")
+	sort.Slice(charArr, func(i, j int)bool {
+		return charArr[i] < charArr[j]
+	})
+	fmt.Println(string(charArr))
 }
