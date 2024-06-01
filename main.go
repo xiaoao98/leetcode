@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"leetcode/daily"
-	"sort"
 )
 
 //
@@ -43,9 +42,9 @@ func main() {
 	// 	return a[i][1] < a[j][1]
 	// })
 	// fmt.Println(a)
-	charArr := []byte("asdafesfqa")
-	sort.Slice(charArr, func(i, j int)bool {
-		return charArr[i] < charArr[j]
-	})
-	fmt.Println(string(charArr))
+	// charArr := []byte("asdafesfqa")
+	// sort.Slice(charArr, func(i, j int)bool {
+	// 	return charArr[i] < charArr[j]
+	// })
+	// fmt.Println(string(charArr))
 }
