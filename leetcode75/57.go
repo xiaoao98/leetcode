@@ -1,9 +1,12 @@
 package leetcode75
 
 func minEatingSpeed(piles []int, h int) int {
-	low := SumInts(piles) / h
+	low := 1
 	high := MaxInts(piles)
 	// fmt.Println(low, high)
+	if h == len(piles) {
+		return high
+	}
 	for low <= high {
 		mid := low + (high-low)/2
 		// fmt.Println(mid)
@@ -16,14 +19,6 @@ func minEatingSpeed(piles []int, h int) int {
 		}
 	}
 	return -1
-}
-
-func SumInts(inputArray []int) int {
-	sum := 0
-	for _, value := range inputArray {
-		sum += value
-	}
-	return sum
 }
 
 func MaxInts(inputArray []int) int {
