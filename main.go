@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
-	"leetcode/daily"
+	"math/rand"
+	"sort"
+	"time"
 )
 
 //
@@ -33,10 +35,10 @@ func main() {
 	//43 47 52 56 66 72 again 
 	// s := "1101"
 	// fmt.Println(daily.NumSteps(s))
-	startGene := "AACCGGTT"
-	endGene := "AACCGGTA"
-	bank := []string{"AACCGGTA"}
-	fmt.Println(daily.MinMutation(startGene, endGene, bank))
+	// startGene := "AACCGGTT"
+	// endGene := "AACCGGTA"
+	// bank := []string{"AACCGGTA"}
+	// fmt.Println(daily.MinMutation(startGene, endGene, bank))
 	// a := [][]int{{1,2}, {3, 1}, {4,5}}
 	// sort.Slice(a, func(i, j int)bool{
 	// 	return a[i][1] < a[j][1]
@@ -47,4 +49,15 @@ func main() {
 	// 	return charArr[i] < charArr[j]
 	// })
 	// fmt.Println(string(charArr))
+	s := []int{3,4,8,6}
+	s = append(s, 7)
+	sort.Ints(s)
+	fmt.Println(s)
+	rand.Seed(time.Now().Unix())
+	a := rand.Intn(30)
+	fmt.Println(a)
+	sort.Slice(s, func(i,j int)bool {
+		return s[i] > s[j]
+	})
+	fmt.Println(s)
 }
