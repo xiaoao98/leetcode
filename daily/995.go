@@ -6,7 +6,7 @@ func minKBitFlips(nums []int, k int) int {
 	currentFlips := 0
 	totalFlips := 0
 	for i := 0; i < size; i++ {
-		if i >= k && flipped[i-k] == true {
+		if i >= k && flipped[i-k] {
 			currentFlips--
 		}
 		if (nums[i] == 0 && currentFlips%2 == 0) || (nums[i] == 1 && currentFlips%2 == 1) {
