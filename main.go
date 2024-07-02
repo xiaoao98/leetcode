@@ -2,6 +2,10 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"sort"
+	"strconv"
+	"time"
 )
 
 //
@@ -41,32 +45,34 @@ func main() {
 	// 	return a[i][1] < a[j][1]
 	// })
 	// fmt.Println(a)
-	// charArr := []byte("asdafesfqa")
-	// sort.Slice(charArr, func(i, j int)bool {
-	// 	return charArr[i] < charArr[j]
-	// })
-	// fmt.Println(string(charArr))
-	// s := []int{3,4,8,6}
-	// s = append(s, 7)
-	// sort.Ints(s)
-	// fmt.Println(s)
-	// rand.Seed(time.Now().Unix())
-	// a := rand.Intn(30)
-	// fmt.Println(a)
-	// sort.Slice(s, func(i,j int)bool {
-	// 	return s[i] > s[j]
-	// })
-	// fmt.Println(s)
-	// c1 := 'c'
-	// c2 := 'a'
-	// fmt.Println(int(c1-c2))
-	// if (c1 >= 'a' && c1 <= 'z') || (c1 >= 'A' && c1 <= 'Z') || (c1 >= '0' && c1 <= '9') {
-	// 	fmt.Println(string(c1))
-	// } 
-	// s1 := "425"
-	// val1, _ := strconv.Atoi(s1)
-	// fmt.Println(val1 + 3)
-	// fmt.Println(strconv.Itoa(val1)+"3")
+	charArr := []byte("asdafesfqa")
+	sort.Slice(charArr, func(i, j int)bool {
+		return charArr[i] < charArr[j]
+	})
+	fmt.Println(string(charArr))
+	s := []int{3,4,8,6}
+	s = append(s, 7)
+	sort.Ints(s)
+	fmt.Println(s)
+	rand.Seed(time.Now().Unix())
+	a := rand.Intn(30)
+	fmt.Println(a)
+	sort.Slice(s, func(i,j int)bool {
+		return s[i] > s[j]
+	})
+	fmt.Println(s)
+	c1 := 'c'
+	c2 := 'a'
+	fmt.Println(int(c1-c2))
+	if (c1 >= 'a' && c1 <= 'z') || (c1 >= 'A' && c1 <= 'Z') || (c1 >= '0' && c1 <= '9') {
+		fmt.Println(string(c1))
+	} 
+	c3 := '0' + 3
+	fmt.Println(string(c3))
+	s1 := "425"
+	val1, _ := strconv.Atoi(s1)
+	fmt.Println(val1 + 3)
+	fmt.Println(strconv.Itoa(val1)+"3")
 	m1 := map[int]int{3: 4, 5:6, 7: 8}
 	fmt.Println(len(m1))
 	for key, val := range m1 {
