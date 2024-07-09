@@ -21,10 +21,12 @@ func nodesBetweenCriticalPoints(head *ListNode) []int {
 				if pos-lastCPos < minD {
 					minD = pos - lastCPos
 				}
+				lastCPos = pos
 			}
-			pos++
-			node = node.Next
 		}
+		pos++
+		lastVal = node.Val
+		node = node.Next
 	}
 	if minD == 100000 {
 		minD = -1
