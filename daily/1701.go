@@ -8,7 +8,7 @@ func averageWaitingTime(customers [][]int) float64 {
 		if customer[0] > lastTime {
 			lastTime = customer[0]
 		}
-		totalWaitTime = lastTime + customer[1] - customer[0]
+		totalWaitTime += lastTime + customer[1] - customer[0]
 		lastTime += customer[1]
 
 	}
