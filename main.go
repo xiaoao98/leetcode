@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"math/rand"
 	"sort"
@@ -8,7 +9,11 @@ import (
 	"time"
 )
 
-//
+type try1 struct {
+	Name string
+	Age int
+}
+
 func main() {
 	// s := "3[a]2[bc]"
 	// fmt.Print(leetcode75.DecodeString(s))
@@ -80,4 +85,16 @@ func main() {
 		delete(m1, key)
 	}
 	fmt.Println(len(m1))
+	aa := try1{"a", 15}
+	bb := try1{"b", 16}
+	cc := make([]*try1, 0)
+	cc = append(cc, &aa)
+	cc = append(cc, &bb)
+	fmt.Println(cc)
+	jsonCc, err := json.Marshal(cc)
+	if err != nil {
+		return 
+	}
+	fmt.Println(string(jsonCc))	
+
 }
